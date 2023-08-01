@@ -8,6 +8,7 @@ function App() {
   const [active, setActive] = useState(false);
   return (
     <div className="App">
+     
       <Button variant="contained" onClick={() => setActive(true)}>Modal</Button>
       {active && <Modal openModal={setActive}/>}
     </div>

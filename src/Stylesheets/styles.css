@@ -1,0 +1,86 @@
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: white;
+    color: aliceblue;
+  } 
+
+
+.container .task{
+    color:black;
+    background-color: #CAC3f7;
+    cursor: grab;
+  }
+.column {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 250px;
+   
+  }
+  
+.task {
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin: 5px 0;
+    transition: 1s ease-in;
+    border: 1px solid rgb(0, 0, 0);
+    cursor: grab;
+    -webkit-transition: 1s ease-in;
+    -moz-transition: 1s ease-in;
+    -ms-transition: 1s ease-in;
+    -o-transition: 1s ease-in;
+}
+  
+.task:hover {
+    background-color: #d0d0d0;
+}
+  
+#done-column {
+    background-color:blue;
+}
+
+#done-2-column {
+    background-color:#E0B0FF;
+}
+#done-3-column {
+    background-color:#E0B0FF;
+}
+
+#done-4-column {
+    background-color:blue;
+}
+
+.column-1 {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  background-color: transparent;
+  display: block;
+  border: none;
+}
+.column-1 .task {
+  width: 20%;
+}
+
+
+.option_btns{
+    width: 75%;
+    height:7rem;
+    display: block;
+    margin:2%;
+    border: 1px solid black;
+    color:white;
+    background-color: red;
+}
+.option_btns:last-of-type{
+    color:white;
+    background-color: blue;
+}
+.option_holder{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

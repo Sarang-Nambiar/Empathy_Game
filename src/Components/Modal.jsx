@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import '../Stylesheets/Modal.css';
-
+import Map from "./Map"
+import MCQ from "./MCQ"
 export default function Modal({ openModal }) {
     
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -40,7 +41,14 @@ export default function Modal({ openModal }) {
                 {currentSlide === slides.length - 1 && 
                 <div className="done-container">
                     <button className="done-button" onClick={() => openModal(false)}>Done</button>
-                </div>}
+              </div>}
+            {currentSlide ===0? 
+              <div className="main_sort">
+                <Map></Map>
+              </div>
+              : <div>
+                  <MCQ></MCQ>
+              </div>}
             </div>
          </div>
         </>
