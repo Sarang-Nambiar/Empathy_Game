@@ -25,6 +25,13 @@
     animation: small-to-big 0.3s ease-out;
 }
 
+.button-disabled {
+    background: grey;
+    cursor: not-allowed;
+}
+
+
+
 @keyframes small-to-big{
     0%{
         transform: scale(0);
