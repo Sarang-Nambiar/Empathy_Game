@@ -6,12 +6,7 @@ export default function Modal({ openModal }) {
     const [currentSlide, setCurrentSlide] = useState(0);
     
     const slides = ["First slide content", "Second slide content"];
-    
-    const handleClose = (e) => {
-        if(e.target.className === 'modal-background'){
-            openModal(false);
-        }
-    }
+
 
     const goNext = () => {
         setCurrentSlide(prevSlide => prevSlide + 1);
@@ -23,7 +18,7 @@ export default function Modal({ openModal }) {
     
     return (
         <>
-         <div className="modal-background" onClick={handleClose}>
+         <div className="modal-background">
             <div className="modal-container">
                 <div className="slide-content">
                   {slides[currentSlide]}
@@ -42,6 +37,10 @@ export default function Modal({ openModal }) {
                       Next
                   </button>
                 </div>
+                {currentSlide === slides.length - 1 && 
+                <div className="done-container">
+                    <button className="done-button" onClick={() => openModal(false)}>Done</button>
+                </div>}
             </div>
          </div>
         </>
