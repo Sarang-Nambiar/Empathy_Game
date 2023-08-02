@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../Stylesheets/Modal.css';
 import Map from "./Map"
 import MCQ from "./MCQ"
-export default function Modal({ openModal }) {
+export default function Modal({ closeModal, setVideoIndex }) {
     
     const [currentSlide, setCurrentSlide] = useState(0);
     
@@ -21,9 +21,6 @@ export default function Modal({ openModal }) {
         <>
          <div className="modal-background">
             <div className="modal-container">
-                <div className="slide-content">
-                  {slides[currentSlide]}
-                </div>
                 <div className="slide-navigation">
                   <button 
                     onClick={goBack} 
@@ -38,16 +35,12 @@ export default function Modal({ openModal }) {
                       Next
                   </button>
                 </div>
-                {currentSlide === slides.length - 1 && 
-                <div className="done-container">
-                    <button className="done-button" onClick={() => openModal(false)}>Done</button>
-              </div>}
             {currentSlide ===0? 
               <div className="main_sort">
                 <Map></Map>
               </div>
               : <div>
-                  <MCQ></MCQ>
+                  <MCQ closeModal={closeModal} setVideoIndex={setVideoIndex}></MCQ>
               </div>}
             </div>
          </div>

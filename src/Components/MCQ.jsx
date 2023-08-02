@@ -14,9 +14,13 @@ const questions = [
   // Add more questions here
 ];
 
-const QuizApp = () => {
+const QuizApp = ({closeModal, setVideoIndex}) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
+
+  const calcVideoIndex = (optionIndex) => {
+    return (currentQuestionIndex * 2 + optionIndex) % 4; // currently maxed out at 4 because there are only 4 videos
+  }
 
   const handleOptionClick = (selectedOption) => {
     const currentQuestion = questions[currentQuestionIndex];
@@ -24,6 +28,12 @@ const QuizApp = () => {
     if (currentQuestionIndex + 1 < questions.length) {
       setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
     } 
+
+    const optionIndex = currentQuestion.options.indexOf(selectedOption);
+
+    setVideoIndex(calcVideoIndex(optionIndex));
+
+    closeModal();
   };
 
   const currentQuestion = questions[currentQuestionIndex];
