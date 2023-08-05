@@ -41,6 +41,7 @@ function App() {
         <Modal
           closeModal={handleModalClose}
           setVideoIndex={setCurrentVideoIndex}
+          v_i={currentVideoIndex}
         />
       )}
     </div>

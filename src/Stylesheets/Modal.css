@@ -17,11 +17,13 @@
     position: relative;
     display: flex;
     width: 70vw;
-    height: 50vh;
+    height: 80vh;
+    overflow-y: scroll;
     border-radius: 14px;
-    background-color: white;
+    background-color: #E7E0C8;
     display: flex;
     flex-direction: column;
+    box-shadow: 0px .2rem 1rem #F7E2E3;
     padding: 1.5rem;
     animation: small-to-big 0.3s ease-out;
 }

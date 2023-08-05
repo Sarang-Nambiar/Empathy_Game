@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../Stylesheets/Modal.css';
 import Map from "./Map"
 import MCQ from "./MCQ"
-export default function Modal({ closeModal, setVideoIndex }) {
+export default function Modal({ closeModal, setVideoIndex ,v_i}) {
     
     const [currentSlide, setCurrentSlide] = useState(0);
     
@@ -40,7 +40,7 @@ export default function Modal({ closeModal, setVideoIndex }) {
                 <Map></Map>
               </div>
               : <div>
-                  <MCQ closeModal={closeModal} setVideoIndex={setVideoIndex}></MCQ>
+                  <MCQ closeModal={closeModal} setVideoIndex={setVideoIndex} vi={v_i}></MCQ>
               </div>}
             </div>
          </div>

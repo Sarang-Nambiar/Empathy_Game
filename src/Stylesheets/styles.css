@@ -3,11 +3,16 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    background-color: white;
-    color: aliceblue;
+    background-color: #E7E0C8;
+    color: white ;
   } 
 
-
+.task_list{
+    height:15rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
 .container .task{
     color:black;
     background-color: #CAC3f7;
@@ -33,23 +38,20 @@
     -o-transition: 1s ease-in;
 }
   
-.task:hover {
-    background-color: #d0d0d0;
-}
-  
+
 #done-column {
-    background-color:blue;
+    background-color:#2081f9;
 }
 
 #done-2-column {
-    background-color:#E0B0FF;
+    background-color:	#f99820;
 }
 #done-3-column {
-    background-color:#E0B0FF;
+    background-color:	#f99820;
 }
 
 #done-4-column {
-    background-color:blue;
+    background-color:#2081f9;
 }
 
 .column-1 {
@@ -72,11 +74,11 @@
     margin:2%;
     border: 1px solid black;
     color:white;
-    background-color: red;
+    background-color: 	#f99820;
 }
 .option_btns:last-of-type{
     color:white;
-    background-color: blue;
+    background-color:#2081f9;
 }
 .option_holder{
     display:flex;
