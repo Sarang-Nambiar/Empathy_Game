@@ -1,0 +1,15 @@
+  {
+    question: 'What would you do?',
+    options: [{option: "Ohh ok, I don't mind.", videoSrc: video1}, 
+    {option: "It's alright, you guys go ahead. I got work to do. ", videoSrc: video2}],
+    correctOption: null,
+  },
+  {
+    question: 'What would you do?',
+    options: [{option: "Convince parents and join John for tuition.",
+              videoSrc : video3},
+            {option:"Don't ask. Work harder.", videoSrc: video4}],
+    correctOption: null,
+  },
+  // Add more questions here
+];

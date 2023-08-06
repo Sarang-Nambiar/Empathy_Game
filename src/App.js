@@ -1,30 +1,24 @@
 import "./App.css";
 import { useState } from "react";
 import Modal from "./Components/Modal";
-import video1 from "./assets/Scene1.mp4";
-import video2 from "./assets/Scene1option1.mp4";
-import video3 from "./assets/Scene1option2.mp4";
-import video4 from "./assets/Scene2option1.mp4";
-import video5 from "./assets/Scene2option2.mp4";
+import Scene1 from "./assets/Scene1.mp4";
 
 function App() {
   const [active, setActive] = useState(false);
-  const [introPlayed, setIntroPlayed] = useState(false);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-  const videos = [video1, video2, video3, video4];
-
+  const [videoIndex, setVideoIndex] = useState(0);
+  const [videoList, setVideoList] = useState([]);
   const handleVideoEnd = () => {
-    setActive(true);
-    setIntroPlayed(true);
+    if (videoIndex + 1 < videoList.length) {
+      setVideoIndex((prevIndex) => prevIndex + 1);
+    } else {
+      setActive(true);
+    }
   };
 
   const handleModalClose = () => {
     setActive(false);
-    if (currentVideoIndex < videos.length - 1) {
-      setCurrentVideoIndex(currentVideoIndex + 1);
-    } else {
-      setCurrentVideoIndex(0);
-    }
+
   };
 
   return (
@@ -32,7 +26,7 @@ function App() {
       <video
         className="scene"
         onEnded={handleVideoEnd}
-        src={introPlayed ? videos[currentVideoIndex] : video1}
+        src={videoList[videoIndex] || Scene1}
         autoPlay
         playsInline
         muted
@@ -42,6 +36,8 @@ function App() {
           closeModal={handleModalClose}
           setVideoIndex={setCurrentVideoIndex}
           v_i={currentVideoIndex}
+          setVideoList={setVideoList}
+          setIndex={setVideoIndex}
         />
       )}
     </div>
