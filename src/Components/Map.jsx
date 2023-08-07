@@ -114,9 +114,9 @@ const PlannerApp = () => {
   return (
     <div>
       <div className="column-1" id="todo-column">
-        <h2>What would you think and feel if u were in Ethan's situation?</h2>
+        <h2>What would you think and feel if you were in Ethan's situation?</h2>
         <form onSubmit={handleFormSubmit}>
-          <label htmlFor="fname">Enter what you think and feel. After done click ENTER and drag ur text to either of the boxes</label>
+          <label htmlFor="fname">Enter what you think and feel. After done click ENTER and drag your text to either of the boxes</label>
           <br />
           <input
             type="text"
