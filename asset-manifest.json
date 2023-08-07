@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/empathygame.github.io/static/css/main.acf7ccfa.css",
+    "main.js": "/empathygame.github.io/static/js/main.76cb01f2.js",
+    "static/js/787.d3befce1.chunk.js": "/empathygame.github.io/static/js/787.d3befce1.chunk.js",
+    "static/media/Scene2.mp4": "/empathygame.github.io/static/media/Scene2.3c320ec13c23d42c7d75.mp4",
+    "static/media/Scene1option1.mp4": "/empathygame.github.io/static/media/Scene1option1.910ca4ce25050d98fb00.mp4",
+    "static/media/Scene1.mp4": "/empathygame.github.io/static/media/Scene1.2afe2c52740ff84399df.mp4",
+    "static/media/Scene2option1.mp4": "/empathygame.github.io/static/media/Scene2option1.2575a3732329b4d2d2f6.mp4",
+    "static/media/Scene1option2.mp4": "/empathygame.github.io/static/media/Scene1option2.6c6031e81486f9e55403.mp4",
+    "static/media/Scene2option2.mp4": "/empathygame.github.io/static/media/Scene2option2.47c69439a459f0e1bb85.mp4",
+    "index.html": "/empathygame.github.io/index.html",
+    "main.acf7ccfa.css.map": "/empathygame.github.io/static/css/main.acf7ccfa.css.map",
+    "main.76cb01f2.js.map": "/empathygame.github.io/static/js/main.76cb01f2.js.map",
+    "787.d3befce1.chunk.js.map": "/empathygame.github.io/static/js/787.d3befce1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.acf7ccfa.css",
+    "static/js/main.76cb01f2.js"
+  ]
+}
